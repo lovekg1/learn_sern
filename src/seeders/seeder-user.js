@@ -10,8 +10,10 @@ module.exports = {
       lastName: 'Anh',
       address: 'VN',
       gender: 1,
-      typeRole: 'ROLE',
-      keyRole: 'R1',
+      phonenumber: '0123456789',
+      image: 'https://cdn-icons-png.flaticon.com/512/149/149071.png',
+      roleId: 'R1',
+      positionId: 'P0',
       createdAt: new Date(),
       updatedAt: new Date()
     }])

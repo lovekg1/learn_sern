@@ -8,6 +8,11 @@ let initWebRoute = (app) => {
 
     router.get('/about', controller.getAboutPage)
 
+    router.get('/crud', controller.getCRUD)
+
+    router.post('/post-crud', controller.postCRUD)
+
+
     return app.use('/', router)
 }
 

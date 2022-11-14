@@ -6,7 +6,9 @@ import connectDB from './config/connectDB'
 
 let app = express()
 
-// app.use(bodyParser.json())
+// bodyParser
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 initWebRoute(app)
 viewEngine(app)
