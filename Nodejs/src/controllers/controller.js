@@ -28,7 +28,6 @@ let postCRUD = async (req, res) => {
 
 let displayCRUD = async (req, res) => {
     let data = await CRUDService.getAllUser()
-    console.log(data)
     return res.render('displaycrud.ejs', {
         dataTable: data,
     })
@@ -38,7 +37,6 @@ let editCRUD = async (req, res) => {
     let userId = req.query.id
     if (userId) {
         let userData = await CRUDService.getUserInfoById(userId)
-        console.log(userData)
         return res.render('editcrud.ejs', {
             user: userData,
         })
