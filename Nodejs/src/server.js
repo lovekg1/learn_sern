@@ -3,8 +3,15 @@ import initWebRoute from './route/web'
 import viewEngine from './config/viewEngine'
 import bodyParser from 'body-parser'
 import connectDB from './config/connectDB'
+import cors from 'cors'
 
 let app = express()
+
+// CORS - Cross-origin resource sharing
+app.use(cors({
+    credentials: true,
+    origin: ['http://localhost:8080', 'http://localhost:3000']
+}))
 
 // bodyParser
 app.use(bodyParser.json())
