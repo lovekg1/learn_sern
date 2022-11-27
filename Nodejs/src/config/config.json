@@ -5,7 +5,11 @@
     "database": "learn_sern",
     "host": "127.0.0.1",
     "logging": false,
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "timezone": "+07:00",
+    "query": {
+      "raw": true
+    }
   },
   "test": {
     "username": "root",
