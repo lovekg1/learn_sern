@@ -22,7 +22,7 @@ let handleLogin = async (req, res) => {
 }
 
 let handleGetAllUsers = async (req, res) => {
-    let id = req.body.id // ALL, id
+    let id = req.query.id // ALL, id
     if (!id) {
         return res.status(200).json({
             errCode: 1,
@@ -32,9 +32,6 @@ let handleGetAllUsers = async (req, res) => {
     }
 
     let users = await userService.getAllUsers(id)
-
-    console.log(users)
-
     return res.status(200).json({
         errCode: 0,
         Message: 'Success',

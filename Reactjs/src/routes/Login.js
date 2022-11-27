@@ -14,7 +14,7 @@ import adminService from '../services/adminService';
 
 class Login extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.btnLogin = React.createRef();
     }
 
