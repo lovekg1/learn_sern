@@ -17,14 +17,11 @@ class Login extends Component {
         }
     }
 
-    handleOnChangeUserName = (event) => {
+    handleOnChangeInput = (event, id) => {
+        let copyState = { ...this.state }
+        copyState[id] = event.target.value
         this.setState({
-            username: event.target.value,
-        })
-    }
-    handleOnChangePassword = (event) => {
-        this.setState({
-            password: event.target.value,
+            ...copyState
         })
     }
 
@@ -76,7 +73,7 @@ class Login extends Component {
                                 className="form-control"
                                 placeholder="Enter your Username"
                                 value={this.state.username}
-                                onChange={(event) => { this.handleOnChangeUserName(event) }}
+                                onChange={(event) => { this.handleOnChangeInput(event, 'username') }}
                             />
                         </div>
                         <div className="col-12 form-group input-login">
@@ -86,7 +83,7 @@ class Login extends Component {
                                     type={this.state.isShowPassword ? 'text' : 'password'}
                                     className="form-control"
                                     placeholder="Enter your Password"
-                                    onChange={(event) => { this.handleOnChangePassword(event) }}
+                                    onChange={(event) => { this.handleOnChangeInput(event, 'password') }}
                                 />
                                 <span
                                     onClick={() => { this.handleShowHidePassword() }}
