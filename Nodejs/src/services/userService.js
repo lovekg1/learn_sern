@@ -89,6 +89,7 @@ let getAllUsers = (userId) => {
 }
 
 let createNewUser = (data) => {
+    console.log(data)
     return new Promise(async (resolve, reject) => {
         try {
             let check = await checkUserEmail(data.email)

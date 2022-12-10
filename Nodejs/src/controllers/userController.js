@@ -40,8 +40,15 @@ let handleGetAllUsers = async (req, res) => {
 }
 
 let handleCreateNewUser = async (req, res) => {
+    // if (!req.body.email || !req.body.password || req.body.lastName || req.body.firstName || req.body.address) {
+    //     return res.status(500).json({
+    //         errCode: 2,
+    //         errMessage: 'Missing required parameters'
+    //     })
+    // }
     let message = await userService.createNewUser(req.body)
     return res.status(200).json(message)
+
 }
 
 let handleDeleteUser = async (req, res) => {
